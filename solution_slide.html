@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 60px;
+            width: 1920px;
+            height: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1700px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            margin-bottom: 60px;
+        }
+        
+        .title {
+            font-size: 4em;
+            font-weight: 800;
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #718096;
+            font-weight: 500;
+        }
+        
+        .features-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 35px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+        }
+        
+        .feature-card:nth-child(1)::before {
+            background: linear-gradient(90deg, #5ee5da 0%, #7aeee4 100%);
+        }
+        
+        .feature-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #ff9d6e 0%, #ffb088 100%);
+        }
+        
+        .feature-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #ff9d6e 0%, #ffb088 100%);
+        }
+        
+        .feature-card:nth-child(4)::before {
+            background: linear-gradient(90deg, #5ee5da 0%, #7aeee4 100%);
+        }
+        
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+        }
+        
+        .feature-title {
+            font-size: 2em;
+            font-weight: 700;
+            color: #1e3a5f;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            font-size: 1.1em;
+            color: #718096;
+            line-height: 1.6;
+        }
+        
+        .logo {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            font-size: 2em;
+            font-weight: 700;
+            color: #5ee5da;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">ÇÖZÜM</div>
+            <div class="subtitle">CallMetric AI'ın Rekabet Avantajları</div>
+        </div>
+        
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">Multimodal Analiz</div>
+                <div class="feature-description">Ses + Metin + Duygu analizini birleştiren hibrit yapı</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">Agentic AI Koçluğu</div>
+                <div class="feature-description">Gerçek zamanlı destek ve akıllı müdahale sistemi</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🇹🇷</div>
+                <div class="feature-title">Türkçe'ye Özel Model</div>
+                <div class="feature-description">Yerli dil yapısına optimize edilmiş AI</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <div class="feature-title">%20-30 Daha Yüksek Doğruluk</div>
+                <div class="feature-description">Rakiplerden belirgin performans farkı</div>
+            </div>
+        </div>
+        
+        <div class="logo">CallMetric AI</div>
+    </div>
+</body>
+</html>
