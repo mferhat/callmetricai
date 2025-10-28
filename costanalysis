@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            padding: 80px 60px;
+            width: 1920px;
+            height: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1600px;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .cost-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+            border-top: 8px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cost-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+        }
+        
+        .cost-card.conservative {
+            border-top-color: #ff9d6e;
+        }
+        
+        .cost-card.base {
+            border-top-color: #5ee5da;
+        }
+        
+        .cost-card.aggressive {
+            border-top-color: #1e3a5f;
+        }
+        
+        .cost-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            opacity: 0.1;
+        }
+        
+        .cost-card.conservative::before {
+            background: #ff9d6e;
+        }
+        
+        .cost-card.base::before {
+            background: #5ee5da;
+        }
+        
+        .cost-card.aggressive::before {
+            background: #1e3a5f;
+        }
+        
+        .scenario-label {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #718096;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .scenario-name {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        .cost-card.conservative .scenario-name {
+            color: #ff9d6e;
+        }
+        
+        .cost-card.base .scenario-name {
+            color: #5ee5da;
+        }
+        
+        .cost-card.aggressive .scenario-name {
+            color: #1e3a5f;
+        }
+        
+        .cost-amount {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        
+        .cost-description {
+            font-size: 1.15em;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cards-grid">
+            <div class="cost-card conservative">
+                <div class="scenario-label">Senaryo</div>
+                <div class="scenario-name">Conservative</div>
+                <div class="cost-amount">$750K</div>
+                <div class="cost-description">
+                    Küçük ekip, sınırlı pazarlama, temel altyapı
+                </div>
+            </div>
+            
+            <div class="cost-card base">
+                <div class="scenario-label">Senaryo</div>
+                <div class="scenario-name">Base Case</div>
+                <div class="cost-amount">$1.0M</div>
+                <div class="cost-description">
+                    Tam ekip, ürün lansmanı, etkinlik ve büyüme
+                </div>
+            </div>
+            
+            <div class="cost-card aggressive">
+                <div class="scenario-label">Senaryo</div>
+                <div class="scenario-name">Aggressive</div>
+                <div class="cost-amount">$1.2M</div>
+                <div class="cost-description">
+                    Hızlı ölçeklenme, global açılım, çoklu işe alım
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
