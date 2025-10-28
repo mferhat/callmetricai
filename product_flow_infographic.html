@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            padding: 60px;
+            width: 1920px;
+            height: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1700px;
+        }
+        
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 35px 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .flow-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+        }
+        
+        .flow-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            border-radius: 20px 0 0 20px;
+        }
+        
+        .flow-step:nth-child(1)::before { background: #1e3a5f; }
+        .flow-step:nth-child(2)::before { background: #5ee5da; }
+        .flow-step:nth-child(3)::before { background: #ff9d6e; }
+        .flow-step:nth-child(4)::before { background: #a8d5a8; }
+        .flow-step:nth-child(5)::before { background: #1e3a5f; }
+        
+        .step-number {
+            font-size: 3em;
+            font-weight: 700;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .flow-step:nth-child(1) .step-number { color: #1e3a5f; }
+        .flow-step:nth-child(2) .step-number { color: #5ee5da; }
+        .flow-step:nth-child(3) .step-number { color: #ff9d6e; }
+        .flow-step:nth-child(4) .step-number { color: #a8d5a8; }
+        .flow-step:nth-child(5) .step-number { color: #1e3a5f; }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+        
+        .step-description {
+            font-size: 1.15em;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        
+        .arrow {
+            font-size: 2.5em;
+            color: #cbd5e0;
+            margin-left: auto;
+            padding-right: 20px;
+        }
+        
+        .flow-step:last-child .arrow {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flow-container">
+            <div class="flow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">ASR (Automatic Speech Recognition)</div>
+                    <div class="step-description">
+                        Ses → Metin dönüşümü (Whisper tabanlı yüksek doğruluk)
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">NLP (Natural Language Processing)</div>
+                    <div class="step-description">
+                        Konuşma metni analiz edilir: niyet, duygu, konu, aksiyon tespiti
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">SER (Speech Emotion Recognition)</div>
+                    <div class="step-description">
+                        Ses tonundan duygu ve stres düzeyi belirlenir
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Fusion AI Katmanı (CallMetricAI Core)</div>
+                    <div class="step-description">
+                        ASR + NLP + SER çıktıları birleştirilir → Temsilci performansı, satış anı, müşteri memnuniyeti skorlanır
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">Insight Dashboard</div>
+                    <div class="step-description">
+                        Gerçek zamanlı koçluk, raporlama ve pazarlama içgörüleri sunulur
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
