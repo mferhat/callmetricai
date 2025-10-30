@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            padding: 80px 60px;
+            width: 1920px;
+            height: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1600px;
+        }
+        
+        .roadmap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .roadmap::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            right: 10%;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3a5f 0%, #5ee5da 50%, #ff9d6e 100%);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        
+        .milestone {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .milestone-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        }
+        
+        .milestone:nth-child(1) .milestone-circle {
+            background: #1e3a5f;
+        }
+        
+        .milestone:nth-child(2) .milestone-circle {
+            background: #5ee5da;
+        }
+        
+        .milestone:nth-child(3) .milestone-circle {
+            background: #ff9d6e;
+        }
+        
+        .milestone-number {
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .milestone-content {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .milestone:nth-child(1) .milestone-content {
+            border-top: 4px solid #1e3a5f;
+        }
+        
+        .milestone:nth-child(2) .milestone-content {
+            border-top: 4px solid #5ee5da;
+        }
+        
+        .milestone:nth-child(3) .milestone-content {
+            border-top: 4px solid #ff9d6e;
+        }
+        
+        .milestone-text {
+            color: #1e3a5f;
+            font-size: 1em;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        
+        .highlight {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="roadmap">
+            <div class="milestone">
+                <div class="milestone-circle">
+                    <div class="milestone-number">1</div>
+                </div>
+                <div class="milestone-content">
+                    <div class="milestone-text">
+                        <span class="highlight">20 KOBİ + 5 Growth + 2 Enterprise</span>
+                        Türkiye'de edinimi<br><br>
+                        (Pilot sonrası ilk satışların gerçekleştirilmesi)
+                    </div>
+                </div>
+            </div>
+            
+            <div class="milestone">
+                <div class="milestone-circle">
+                    <div class="milestone-number">2</div>
+                </div>
+                <div class="milestone-content">
+                    <div class="milestone-text">
+                        <span class="highlight">1 Milyon $ ARR</span>
+                        Tekrarlayan yıllık gelir hedefine ulaşılması
+                    </div>
+                </div>
+            </div>
+            
+            <div class="milestone">
+                <div class="milestone-circle">
+                    <div class="milestone-number">3</div>
+                </div>
+                <div class="milestone-content">
+                    <div class="milestone-text">
+                        <span class="highlight">Kanada Pazarı</span>
+                        İlk hukuki ve kurumsal hazırlıkların tamamlanması<br><br>
+                        (Globalleşme yol haritası)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
